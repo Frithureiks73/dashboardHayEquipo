@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 function Tarjeta(props){
     return(
@@ -21,4 +22,11 @@ function Tarjeta(props){
         </React.Fragment>
     )
 }
+
+Tarjeta.propTypes = {
+    color: PropTypes.string.isRequired,
+    titulo: PropTypes.string.isRequired,
+    valor: PropTypes.number.isRequired
+}
+
 export default Tarjeta;
