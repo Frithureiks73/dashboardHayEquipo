@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 import FilaTabla from './FilaTabla';
-
 import TituloFooterTabla from './TituloFooterTabla';
 
-
 class Tabla extends Component {
-        constructor() {
-		super();
-		this.state = {
-			equiposList: []
-		}
-	}
+    constructor() {
+        super();
+        this.state = {
+            equiposList: []
+        }
+    }
+
     componentDidMount() {
-		fetch('http://localhost:3002/productsApi/')
-			.then(respuesta => {
-				console.log(respuesta)
-				return respuesta.json()
-			})
-			.then(equipos => {
-				this.setState({ equiposList: equipos.data })
-			})
-			.catch(error => console.log(error))
-	}
+        fetch('http://localhost:3002/productsApi/')
+            .then(respuesta => {
+                console.log(respuesta)
+                return respuesta.json()
+            })
+            .then(equipos => {
+                this.setState({ equiposList: equipos.data })
+            })
+            .catch(error => console.log(error))
+    }
 
 
     render() {
@@ -42,11 +41,9 @@ class Tabla extends Component {
                                     <TituloFooterTabla />
                                 </tfoot>
                                 <tbody>
-                                    {
-                                        equiposList.map((equipo, index) => {
-                                            return <FilaTabla  {...equipo} key={index} />
-                                        })
-                                    }
+                                    {this.state.equiposList.map((equipo, index) => {
+                                        return <FilaTabla  {...equipo} key={index} />
+                                    })}
                                 </tbody>
                             </table>
                         </div>
@@ -56,4 +53,5 @@ class Tabla extends Component {
         )
     }
 }
+
 export default Tabla;

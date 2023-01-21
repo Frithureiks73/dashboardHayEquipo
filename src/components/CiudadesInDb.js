@@ -10,7 +10,7 @@ class CiudadesInDb extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3002/productsApi/')
+		fetch('http://localhost:3002/usersApi/')
 			.then(respuesta => {
 				console.log(respuesta)
 				return respuesta.json()
