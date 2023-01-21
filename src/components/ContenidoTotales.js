@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Tarjeta from "./Tarjeta";
 
-class ContentRowMovies extends Component {
+class ContenidoTotales extends Component {
     constructor() {
         super();
         this.state = {
@@ -53,4 +53,4 @@ class ContentRowMovies extends Component {
     }
 }
 
-export default ContentRowMovies;
+export default ContenidoTotales;

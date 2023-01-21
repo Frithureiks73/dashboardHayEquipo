@@ -1,8 +1,7 @@
 import React from 'react';
-import ContentRowTop from "./ContentRowTop";
+import ContenidoPrincipal from "./ContenidoPrincipal";
 import TopBar from "./TopBar"
 import Footer from "./Footer"
-import Tabla from './Tabla';
 
 function ContentWrapper() {
     return (
@@ -10,10 +9,9 @@ function ContentWrapper() {
             <div id="content-wrapper" className="d-flex flex-column">
                 <div id="content">
                     <TopBar />
-                    <ContentRowTop />
-                    <Tabla/>
+                    <ContenidoPrincipal />
+                    <Footer />
                 </div>
-                <Footer />
             </div>
         </React.Fragment>
     );

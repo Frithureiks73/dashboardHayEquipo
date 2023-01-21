@@ -1,13 +1,13 @@
 import React from "react";
-import imagenFondo from '../assets/images/mandalorian.jpg'
+import imagenFondo from '../assets/images/lionelcampeon.jpg'
 
-function LastMovieInDb() {
+function UltimoUsuario() {
     return (
         <React.Fragment>
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
+                        <h5 className="m-0 font-weight-bold text-gray-800">Último Usuario Creado</h5>
                     </div>
                     <div className="card-body">
                         <div className="text-center">
@@ -22,4 +22,4 @@ function LastMovieInDb() {
     );
 }
 
-export default LastMovieInDb;
+export default UltimoUsuario;

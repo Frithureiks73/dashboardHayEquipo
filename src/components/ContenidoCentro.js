@@ -1,16 +1,16 @@
 import React from "react";
-import LastMovieInDb from "./LastMovieInDb";
+import UltimoUsuario from "./UltimoUsuario";
 import CiudadesInDb from "./CiudadesInDb";
 
-function ContentRowLastM() {
+function ContenidoCentro() {
     return (
         <React.Fragment>
             <div className="row">
-                <LastMovieInDb />
+                <UltimoUsuario />
                 <CiudadesInDb />
             </div>
         </React.Fragment>
     );
 }
 
-export default ContentRowLastM;
+export default ContenidoCentro;
