@@ -1,13 +1,13 @@
 import React from "react";
 import UltimoUsuario from "./UltimoUsuario";
-import CiudadesInDb from "./CiudadesInDb";
+import CanchasInDb from "./CanchasInDb";
 
 function ContenidoCentro() {
     return (
         <React.Fragment>
             <div className="row">
                 <UltimoUsuario />
-                <CiudadesInDb />
+                <CanchasInDb />
             </div>
         </React.Fragment>
     );

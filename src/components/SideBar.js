@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
 import { Link, Route, Routes } from 'react-router-dom';
-import CiudadesInDb from './CiudadesInDb';
+import CanchasInDb from './CanchasInDb';
 import ContentWrapper from './ContentWrapper';
 import UltimoUsuario from './UltimoUsuario';
 import ContenidoTotales from './ContenidoTotales';
@@ -38,7 +38,7 @@ function SideBar() {
 
 				{/* <!-- Nav Item - Complejos --> */}
 				<li className="nav-item">
-					<Link className="nav-link collapsed" to="/CiudadesInDb">
+					<Link className="nav-link collapsed" to="/CanchasInDb">
 						<i className="fas fa-fw fa-folder"></i>
 						<span>Complejos</span>
 					</Link>
@@ -64,10 +64,10 @@ function SideBar() {
 			</ul>
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
-				<Route path="/CiudadesInDb" element={<CiudadesInDb />} />
+				<Route path="/CanchasInDb" element={<CanchasInDb />} />
 				<Route path="/UltimoUsuario" element={<UltimoUsuario />} />
 				<Route path="/ContenidoTotales" element={<ContenidoTotales />} />
-				<Route component={NotFound} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</React.Fragment>
 	);

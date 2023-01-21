@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import Ciudades from "./Ciudades";
+import Canchas from "./Canchas";
 
-class CiudadesInDb extends Component {
+class CanchasInDb extends Component {
 	constructor() {
 		super();
 		this.state = {
-			ciudadesList: []
+			canchasList: []
 		}
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3002/usersApi/')
+		fetch('http://localhost:3000/complejoApi/')
 			.then(respuesta => {
 				console.log(respuesta)
 				return respuesta.json()
 			})
-			.then(ciudades => {
-				this.setState({ ciudadesList: ciudades.data })
+			.then(Canchas => {
+				this.setState({ canchasList: Canchas.data })
 			})
 			.catch(error => console.log(error))
 	}
@@ -27,12 +27,12 @@ class CiudadesInDb extends Component {
 				<div className="col-lg-6 mb-4">
 					<div className="card shadow mb-4">
 						<div className="card-header py-3">
-							<h5 className="m-0 font-weight-bold text-gray-800">Ubicación de los Complejos</h5>
+							<h5 className="m-0 font-weight-bold text-gray-800">Canchas Asociadas</h5>
 						</div>
 						<div className="card-body">
 							<div className="row">
-								{this.state.ciudadesList.map((ciudad, index) => {
-									return <Ciudades {...ciudad} key={index} />
+								{this.state.canchasList.map((cancha, index) => {
+									return <Canchas {...cancha} key={index} />
 								})}
 							</div>
 						</div>
@@ -43,4 +43,4 @@ class CiudadesInDb extends Component {
 	}
 }
 
-export default CiudadesInDb;
+export default CanchasInDb;

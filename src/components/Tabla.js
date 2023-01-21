@@ -11,7 +11,7 @@ class Tabla extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3002/productsApi/')
+        fetch('http://localhost:3000/productsApi/')
             .then(respuesta => {
                 console.log(respuesta)
                 return respuesta.json()

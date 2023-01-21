@@ -43,8 +43,8 @@ class ContenidoTotales extends Component {
             <React.Fragment>
                 <div className="row">
                     {
-                        this.state.tarjetaProps.map((producto, index) => {
-                            return <Tarjeta  {...producto} key={index} />
+                        this.state.tarjetaProps.map((propiedades, index) => {
+                            return <Tarjeta  {...propiedades} key={index} />
                         })
                     }
                 </div>
