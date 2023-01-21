@@ -1,13 +1,13 @@
 import React from "react";
 import LastMovieInDb from "./LastMovieInDb";
-import GenresInDb from "./GenresInDb";
+import CiudadesInDb from "./CiudadesInDb";
 
 function ContentRowLastM() {
     return (
         <React.Fragment>
             <div className="row">
                 <LastMovieInDb />
-                <GenresInDb />
+                <CiudadesInDb />
             </div>
         </React.Fragment>
     );
