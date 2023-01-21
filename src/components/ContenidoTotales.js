@@ -27,16 +27,51 @@ class ContenidoTotales extends Component {
     }
 
     componentDidMount() {
-		/* fetch('http://localhost:3002/productsApi/')
-			.then(equipos => {
-				console.log(equipos)
-				return equipos.json()
-			})
-			.then(equipos => {
-				this.setState({ tarjetaProps: equipos.total })
-			})
-			.catch(error => console.log(error)) */
-	}
+        /* fetch('http://localhost:3000/productsApi/')
+            .then(respuesta => {
+                console.log(respuesta)
+                return respuesta.json()
+            })
+            .then(equipos => {
+                this.setState([{
+                    color: "primary",
+                    titulo: "Total de Equipos",
+                    valor: equipos.total,
+                    icono: "fa-solid fa-futbol"
+                }])
+            })
+            .catch(error => console.log(error))
+
+        fetch('http://localhost:3000/usersApi/')
+            .then(respuesta => {
+                console.log(respuesta)
+                return respuesta.json()
+            })
+            .then(usuarios => {
+                this.setState([...{
+                    color: "primary",
+                    titulo: "Total de Equipos",
+                    valor: usuarios.total,
+                    icono: "fa-solid fa-futbol"
+                }])
+            })
+            .catch(error => console.log(error))
+
+        fetch('http://localhost:3000/usersApi/')
+            .then(respuesta => {
+                console.log(respuesta)
+                return respuesta.json()
+            })
+            .then(desafios => {
+                this.setState([...{
+                    color: "primary",
+                    titulo: "Total de Equipos",
+                    valor: desafios.total,
+                    icono: "fa-solid fa-futbol"
+                }])
+            })
+            .catch(error => console.log(error)) */
+    }
 
     render() {
         return (
