@@ -27,50 +27,36 @@ class ContenidoTotales extends Component {
     }
 
     componentDidMount() {
-        /* fetch('http://localhost:3000/productsApi/')
-            .then(respuesta => {
-                console.log(respuesta)
-                return respuesta.json()
-            })
-            .then(equipos => {
-                this.setState([{
+        Promise.all([
+            fetch("http://localhost:3000/productsApi/").then(equipos => equipos.json()),
+            fetch("http://localhost:3000/usersApi/").then(usuarios => usuarios.json()),
+            fetch("http://localhost:3000/reservaApi/").then(desafios => desafios.json())
+        ]).then((data) => {
+            console.log(data)
+            this.setState({
+                tarjetaProps: [{
                     color: "primary",
                     titulo: "Total de Equipos",
-                    valor: equipos.total,
-                    icono: "fa-solid fa-futbol"
-                }])
+                    valor: data[0].total,
+                    icono: "fa-solid fa-futbol",
+                },
+                {
+                    color: "success",
+                    titulo: "Total de Jugadores",
+                    valor: data[1].total,
+                    icono: "fa-solid fa-user",
+                },
+                {
+                    color: "warning",
+                    titulo: "Total de Desafios",
+                    valor: data[2].total,
+                    icono: "fa-solid fa-trophy",
+                }]
             })
-            .catch(error => console.log(error))
-
-        fetch('http://localhost:3000/usersApi/')
-            .then(respuesta => {
-                console.log(respuesta)
-                return respuesta.json()
+        })
+            .catch((err) => {
+                console.log(err);
             })
-            .then(usuarios => {
-                this.setState([...{
-                    color: "primary",
-                    titulo: "Total de Equipos",
-                    valor: usuarios.total,
-                    icono: "fa-solid fa-futbol"
-                }])
-            })
-            .catch(error => console.log(error))
-
-        fetch('http://localhost:3000/usersApi/')
-            .then(respuesta => {
-                console.log(respuesta)
-                return respuesta.json()
-            })
-            .then(desafios => {
-                this.setState([...{
-                    color: "primary",
-                    titulo: "Total de Equipos",
-                    valor: desafios.total,
-                    icono: "fa-solid fa-futbol"
-                }])
-            })
-            .catch(error => console.log(error)) */
     }
 
     render() {
