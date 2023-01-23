@@ -1,7 +1,23 @@
-import React from 'react';
-import foto from '../assets/images/lioavatar.jpg';
+import React, { useState, useEffect } from 'react';
+import UsuarioTopBar from './UsuarioTopBar';
 
 function TopBar() {
+
+	const [usuarioLogged, setUsuarioLogged] = useState([]);
+
+	useEffect(() => {
+		fetch('http://localhost:3000/session/')
+			.then(respuesta => {
+				console.log(respuesta)
+				return respuesta.json()
+			})
+			.then(userL => {
+				console.log(userL)
+				setUsuarioLogged(userL.data)
+			})
+			.catch(error => console.log(error))
+	}, [])
+
 	return (
 		<React.Fragment>
 			<nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -35,12 +51,7 @@ function TopBar() {
 					<div className="topbar-divider d-none d-sm-block"></div>
 
 					{/* <!-- Nav Item - User Information --> */}
-					<li className="nav-item dropdown no-arrow">
-						<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-							<span className="mr-2 d-none d-lg-inline text-gray-600 small">Lionel Messi</span>
-							<img className="img-profile rounded-circle" src={foto} alt="Lionel Messi - Campeón del Mundo" width="60" />
-						</a>
-					</li>
+					< UsuarioTopBar {...usuarioLogged} />
 				</ul>
 			</nav>
 		</React.Fragment>
