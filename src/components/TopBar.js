@@ -6,7 +6,7 @@ function TopBar() {
 	const [usuarioLogged, setUsuarioLogged] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:3000/session/')
+		fetch('https://hayequipo-4o7m.onrender.com/session/')
 			.then(respuesta => {
 				console.log(respuesta)
 				return respuesta.json()

@@ -6,7 +6,7 @@ function UltimoUsuario() {
     const [usuarioFinal, setUsuarioFinal] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/ultimo/')
+        fetch('https://hayequipo-4o7m.onrender.com/ultimo/')
             .then(respuesta => {
                 console.log(respuesta)
                 return respuesta.json()

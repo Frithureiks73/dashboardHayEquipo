@@ -11,7 +11,7 @@ class Tabla extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/productsApi/')
+        fetch('https://hayequipo-4o7m.onrender.com/productsApi/')
             .then(respuesta => {
                 console.log(respuesta)
                 return respuesta.json()

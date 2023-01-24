@@ -24,9 +24,9 @@ function ContenidoTotales() {
 
     useEffect(() => {
         Promise.all([
-            fetch("http://localhost:3000/productsApi/").then(equipos => equipos.json()),
-            fetch("http://localhost:3000/usersApi/").then(usuarios => usuarios.json()),
-            fetch("http://localhost:3000/reservaApi/").then(desafios => desafios.json())
+            fetch("https://hayequipo-4o7m.onrender.com/productsApi/").then(equipos => equipos.json()),
+            fetch("https://hayequipo-4o7m.onrender.com/usersApi/").then(usuarios => usuarios.json()),
+            fetch("https://hayequipo-4o7m.onrender.com/reservaApi/").then(desafios => desafios.json())
         ]).then((data) => {
             console.log(data)
             setTarjetaProps([{

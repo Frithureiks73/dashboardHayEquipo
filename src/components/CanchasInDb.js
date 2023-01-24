@@ -6,7 +6,7 @@ function CanchasInDb() {
     const [canchasList, setCanchasList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/complejoApi/')
+        fetch('https://hayequipo-4o7m.onrender.com/complejoApi/')
             .then(respuesta => {
                 console.log(respuesta)
                 return respuesta.json()
