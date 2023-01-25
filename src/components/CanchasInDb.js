@@ -15,7 +15,7 @@ function CanchasInDb() {
                 setCanchasList(Canchas.data)
             })
             .catch(error => console.log(error))
-    }, [])
+    }, [canchasList])
 
     return (
         <React.Fragment>

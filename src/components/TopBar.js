@@ -16,7 +16,7 @@ function TopBar() {
 				setUsuarioLogged(userL.data)
 			})
 			.catch(error => console.log(error))
-	}, [])
+	}, [usuarioLogged])
 
 	return (
 		<React.Fragment>

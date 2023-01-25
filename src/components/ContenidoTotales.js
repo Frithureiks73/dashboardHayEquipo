@@ -51,7 +51,7 @@ function ContenidoTotales() {
             .catch((err) => {
                 console.log(err);
             })
-    }, [])
+    }, [tarjetaProps])
 
     return (
         <React.Fragment>

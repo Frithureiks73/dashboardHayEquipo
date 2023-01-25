@@ -16,9 +16,7 @@ function UltimoUsuario() {
                 setUsuarioFinal(ultimoUser.data)
             })
             .catch(error => console.log(error))
-    }, [])
-
-
+    }, [usuarioFinal])
 
     return (
         <React.Fragment>

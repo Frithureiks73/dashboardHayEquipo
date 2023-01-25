@@ -16,7 +16,7 @@ function Tabla() {
                 setEquiposList(equipos.data)
             })
             .catch(error => console.log(error))
-    }, [])
+    }, [equiposList])
 
     return (
         <React.Fragment>
